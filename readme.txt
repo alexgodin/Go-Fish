@@ -1,0 +1,1 @@
+This is given to you by me, for free, but you are not allowed to take this code and call it your own work. If you upload this to your own repo or somewhere else please give me credit and a like to the original code
