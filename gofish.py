@@ -1,4 +1,3 @@
-
 import random
 deck=['Ace of Clubs','Two of Clubs','Three of Clubs','Four of Clubs','Five of Clubs', 'Six of Clubs','Seven of Clubs','Eight of Clubs','Nine of Clubs','Ten of Clubs','Jack of Clubs','Queen of Clubs','King of Clubs',
     'Ace of Diamonds','Two of Diamonds','Three of Diamonds','Four of Diamonds','Five of Diamonds','Six of Diamonds','Seven of Diamonds','Eight of Diamonds','Nine of Diamonds','Ten of Diamonds','Jack of Diamods','Queen of Diamonds','King of diamonds',
@@ -33,9 +32,7 @@ def singleplayer():
         yourhand.append (card)
         deck.remove(card)
         count+=1
-  
     count=0
-    computerhand=[]
     while count<7:
         cardpick=random.randrange(0,len(deck))
         card=deck[cardpick]
@@ -49,11 +46,17 @@ def singleplayer():
     yourask=int(input("What card Do you want a pair of(enter 11 for jack, 12 for queen or 13 for king)"))
     yourask-=1
     yournumber=numscanask[yourask]
+    for card in computerhand:
+        if card == yournumber:
+            print("yay")
+            break
+        #do something like this
     if yournumber in computerhand[0] or computerhand[1] or computerhand[2] or computerhand[3] or computerhand[4] or computerhand[5] or computerhand[6] or computerhand[7]:
       print("this loop works")
     else:
         print("nope")
-    
+    #you could also use something along these lines for card picking
+        computerhand= random.shuffle(deck)[0:7]
 
 
 
